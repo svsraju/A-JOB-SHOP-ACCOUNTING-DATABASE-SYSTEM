@@ -54,5 +54,29 @@ The updated process account is for the process used by a job. The updated depart
 
 ### TASKS PERFORMED
 #### Task1 
-Designed an ER diagram and a relational database to represent the Job-Shop Accounting database defined above.ER Diagrams are most often used to design or debug relational databases.they use a defined set of symbols such as rectangles, diamonds, ovals and connecting lines to depict the interconnectedness of entities, relationships and their attributes. They mirror grammatical structure, with entities as nouns and relationships as verbs.
+Designed an ER diagram and a relational database to represent the Job-Shop Accounting database defined above.ER Diagrams are most often used to design or debug relational databases.they use a defined set of symbols such as rectangles, diamonds, ovals and connecting lines to depict the interconnectedness of entities, relationships and their attributes. They mirror grammatical structure, with entities as nouns and relationships as verbs.This is the final Digned ER diagram
 
+![image](https://user-images.githubusercontent.com/46058709/73490966-3522e200-4373-11ea-9cf0-8bf3798d47fd.png)
+
+#### Task1 
+
+
+#### Task1 
+
+
+
+#### Task1 
+
+
+
+#### Task1 
+
+
+
+
+
+#### Task1 
+
+
+
+#### Task1 
