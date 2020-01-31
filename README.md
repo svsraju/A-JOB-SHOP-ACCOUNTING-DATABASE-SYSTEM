@@ -103,22 +103,69 @@ You can check the table in the above report
 #### Task 3
 I have Discussed the choices of appropriate storage structures for each relational table assuming that all types of storage structures discussed in are available. For each table, I have identified the queries (from the list of the given queries) that access the table, the type of each of those queries (insertion, deletion, random search, or range search), the search keys (if any) involved in each of those queries, the frequency of each of those queries, my choice of the file organization for the table, and my justifications.
 
-I have implemented the database in <b> Azure SQL Database <b>
+I have implemented the database in <b> Azure SQL Database </b>
 
 
 #### Task 4
+
 Constructed SQL statements to create tables and implement them on Azure SQL Database. All Create statements are included with appropriate constraints as defined in Task 2. 
-For each table, you must include SQL statements that create the same storage structure as the one i had selected for Azure SQL Database implementation.
+For each table, I have included SQL statements that create the same storage structure as the one I had selected for Azure SQL Database implementation.
+
+You can see the <i>create_Table.sql</i> which has the sql statements for creation of tables and <i>Insertions_IP.sql</i> has the insertion statements for inserting the information in to the tables.
 
 
-#### Task1 
+#### Task 5 
+
+I have Written SQL statements for all queries (1-15) above. 
+
+I have also Developed a Java application program that uses JDBC and Azure SQL Database to implement all SQL queries (options 1-15), two additional queries for import and export (options 16-17), and the “Quit” option (option 18) were added to make the things easy for the user. 
+
+The program will stop execution only when the user chooses the “Quit” option; otherwise all options will be available for the user to choose at all times.
+
+Available options to the user:
+
+```
+=========================================
+1. Enter a new customer
+2. Enter a new department 
+3. Enter a new assembly with its customer-name, assembly-details, assembly-id, and dateordered
+4. Enter a new process-id and its department together with its type and information relevant to the type
+5. Create a new account and associate it with the process, assembly, or department to which it is applicable 
+6. Enter a new job, given its job-no, assembly-id, process-id, and date the job commenced
+7. At the completion of a job, enter the date it completed and the information relevant to the type of job 
+8. Enter a transaction-no and its sup-cost and update all the costs (details) of the affected accounts by adding sup-cost to their current values of details
+9. Retrieve the cost incurred on an assembly-id
+10. Retrieve the total labor time within a department for jobs completed in the department during a given date 
+11. Retrieve the processes through which a given assembly-id has passed so far (in datecommenced order) and the department responsible for each process 
+12. Retrieve the jobs (together with their type information and assembly-id) completed during a given date in a given department  
+13. Retrieve the customers (in name order) whose category is in a given range 
+14. Delete all cut-jobs whose job-no is in a given range  
+15. Change the color of a given paint job 
+16. Import: enter new customers from a data file until the file is empty
+17. Export: Retrieve the customers (in name order) whose category is in a given range and output them to a data file instead of screen 
+18. QUIT
+=========================================
+```
+
+I have written the java program in eclipse work space. You can see the code in the <i>Java_program for Accounting Database.java</i>
+
+Data manipulation and error checking is done by Azure SQL Database.My program is only to create the menu, accept choices, form queries, submit them to Azure SQL Database for execution, and display results or error messages.
+
+I have run the program created for to test its correctness. To populate the database, I perform 5 queries for each type (1, 2) and 10 queries for each type (3, 4, 5, 6, 7, 8) and showed the contents of the affected tables after the 5 queries of each type (1, 2) are completed and after the 10 queries for each type (3, 4, 5, 6, 7, 8) are completed. To show database access is possible, I performed 3 queries for each type (9, 10, 11, 12, 13, 14, 15). 
+
+To show the import and export facilities are available, run each option (16-17) once. To show the Quit option is available, run option (18) at least once. To demonstrate that Azure SQL Database can detect errors, I also need to performed 3 queries of different types that contain some errors.
+
+All the screenshots can be found in the Project report pdf file.
 
 
 
+#### Task 6 
+
+I have written a Web database application using Azure SQL Database and JSP which provides the Web pages for query 1 and query 13. Since both queries take the input data from the user, there are two Web pages for each query as follows: 
+
+For query 1, one Web page to allow the user to enter the input data and one to display a message confirming the successful execution of the insertion; 
+
+For query 13, there is one Web page to allow the user to enter the input data and one to display the retrieval results with appropriate headings. To show that our Web application works correctly, I ran the Web application so that queries 1 and 13 were  executed in this order: first query 13, then query 1, and then query 13 again, making sure that the results of query 1 will change the results of query 13 that follow query 1.
 
 
-#### Task1 
-
-
-
-#### Task1 
+This is a project to show how a complete database is designed and can be used by users.
