@@ -53,20 +53,62 @@ The updated process account is for the process used by a job. The updated depart
 13. Retrieve the customers (in name order) whose category is in a given range (100/day). 14. Delete all cut-jobs whose job-no is in a given range (1/month). 15. Change the color of a given paint job (1/week).
 
 ### TASKS PERFORMED
-#### Task1 
-Designed an ER diagram and a relational database to represent the Job-Shop Accounting database defined above.ER Diagrams are most often used to design or debug relational databases.they use a defined set of symbols such as rectangles, diamonds, ovals and connecting lines to depict the interconnectedness of entities, relationships and their attributes. They mirror grammatical structure, with entities as nouns and relationships as verbs.This is the final Digned ER diagram
+#### Task 1 
+Designed an ER diagram and a relational database to represent the Job-Shop Accounting database defined above.ER Diagrams are most often used to design or debug relational databases.they use a defined set of symbols such as rectangles, diamonds, ovals and connecting lines to depict the interconnectedness of entities, relationships and their attributes. They mirror grammatical structure, with entities as nouns and relationships as verbs.This is the final Designed ER diagram
 
 ![image](https://user-images.githubusercontent.com/46058709/73490966-3522e200-4373-11ea-9cf0-8bf3798d47fd.png)
 
-#### Task1 
+
+#### Relational Schema for tables/relations:
+
+`Customer(name,address,category(1-10))`
+
+`Assembly(assembly_id, date_ordered, assembly_details, name,account_no)`
+
+`Department(department_number, department_data, account_no)`
+
+`Process(process_id, process_data,department_number,account_no)`
+
+`paint_process(process_id,paint_type,painting_method)`
+
+`Fit_process(process_id,fit_type)`
+
+`Cut_process(process_id,cutting_type,machine_type)`
+
+`Job(job_no, commence_date, completion_date, assembly_id, process_id )`
+
+`Paint_job(paint_job_no,color,volume,labor_time)`
+
+`Fit_job(fit_job_no,labor_time)`
+
+`Cut_job(cut_job_no,type_of_machine,time_used,material_used,labor_time)`
+
+`Cost_transactions(transaction_no, job_no,given_cost, asse_account_no,dep_account_no, pro_account_no)`
+
+`Assembly_account(account_no, established_date,assembly_costs)`
+
+`Department_account(account_no, established_date,department_costs)`
+
+`Process_account(account_no, established_date, process_costs)`
+
+`Assigned_job(job_no, commence_date, completion_date, assembly_id, date_ordered, assembly_details, process_id, process_data)`
 
 
-#### Task1 
+#### Task 2 
+Provided a Data Element Dictionary that lists the names, types, and sizes (in bytes) of all attributes and associated constraints for each table.
+
+You can check the table in the above report
 
 
+#### Task 3
+I have Discussed the choices of appropriate storage structures for each relational table assuming that all types of storage structures discussed in are available. For each table, I have identified the queries (from the list of the given queries) that access the table, the type of each of those queries (insertion, deletion, random search, or range search), the search keys (if any) involved in each of those queries, the frequency of each of those queries, my choice of the file organization for the table, and my justifications.
 
-#### Task1 
+I have implemented the database in <b> Azure SQL Database <b>
 
+
+#### Task 4
+Constructed SQL statements to create tables and implement them on Azure SQL Database. All Create statements are included with appropriate constraints as defined in Task 2. 
+For each table, you must include SQL statements that create the same storage structure as the one i had selected for Azure SQL Database implementation.
 
 
 #### Task1 
